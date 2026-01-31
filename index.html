@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVORY CONSULTING | Performance Commerciale Guadeloupe</title>
+    <meta name="description" content="L'alliance du Digital et de l'Humain pour faire décoller votre entreprise aux Antilles. Audit gratuit de 25 min.">
+
+    <!-- Polices Google Fonts Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CHARTE GRAPHIQUE IVORY --- */
+        :root {
+            /* Bleu Nuit éclairci */
+            --midnight: #2A3B55; 
+            --ivory: #F7F3E9;    
+            --gold: #CFA94A;     
+            --gold-hover: #b38b32;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+        }
+
+        /* --- RESET & BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--midnight);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        /* Conteneur global centré */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- CLASSES UTILITAIRES --- */
+        .text-gold { color: var(--gold); }
+        .text-center { text-align: center; }
+        .bg-ivory { background-color: var(--ivory); color: var(--text-dark); }
+        .bg-midnight { background-color: var(--midnight); color: var(--white); }
+
+        /* --- BOUTONS CTA --- */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--midnight);
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(207, 169, 74, 0.3);
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-cta:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(207, 169, 74, 0.5);
+        }
+
+        /* --- HEADER / HERO --- */
+        header {
+            padding: 30px 0;
+            position: relative;
+        }
+        .nav-logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .nav-logo img { 
+            height: 120px; 
+            width: auto;
+            display: inline-block; 
+        } 
+        
+        #hero {
+            padding: 40px 0 80px;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        #hero h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        
+        /* --- SECTION PROBLEMES --- */
+        #problemes {
+            padding: 80px 0;
+        }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .pain-card {
+            background: rgba(255,255,255,0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--midnight);
+        }
+        .pain-card i { font-size: 2rem; color: var(--midnight); margin-bottom: 15px; }
+        .pain-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--midnight); font-weight: 700; }
+
+        /* --- SECTION METHODE --- */
+        #methode {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .step-box {
+            flex: 1;
+            min-width: 280px;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(207, 169, 74, 0.2);
+        }
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.5;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* --- SECTION REFERENCES --- */
+        #references {
+            padding: 40px 0;
+            background-color: #fff;
+            color: var(--midnight);
+            border-bottom: 1px solid #eee;
+        }
+        .logos-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            margin-top: 20px;
+            font-weight: 700;
+            opacity: 0.7;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* --- SECTION EXPERT --- */
+        #expert {
+            padding: 80px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        .expert-photo {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .expert-photo img {
+            border-radius: 20px;
+            border: 2px solid var(--gold);
+            box-shadow: 20px 20px 0 rgba(207, 169, 74, 0.2);
+            max-height: 400px;
+            width: auto;
+            margin: 0 auto;
+        }
+        .expert-bio { flex: 1; min-width: 300px; }
+        .expert-bio h2 { font-size: 2.5rem; color: var(--midnight); margin-bottom: 20px; }
+
+        /* --- SECTION OFFRES --- */
+        #offres {
+            padding: 80px 0;
+        }
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            align-items: start;
+        }
+        .offer-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .offer-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .offer-card.featured { background: linear-gradient(145deg, #374c6e, #2A3B55); border: 2px solid var(--gold); position: relative; overflow: hidden; }
+        
+        .offer-card h3 { font-size: 1.5rem; color: var(--white); margin-bottom: 5px; }
+        .offer-subtitle { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 15px; opacity: 0.9; }
+        
+        .price-block { margin: 20px 0; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .price-main { font-size: 2.2rem; font-weight: 700; color: var(--white); line-height: 1; }
+        .price-sub { font-size: 0.9rem; color: #ccc; margin-top: 5px; display: block; }
+        
+        .offer-card ul li { margin-bottom: 10px; font-size: 0.95rem; display: flex; gap: 10px; }
+        .offer-card ul li i { margin-top: 5px; }
+
+        /* Styles spécifiques pour le bloc Sur Mesure */
+        .custom-price-list li {
+            display: block !important;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .custom-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .custom-detail {
+            font-size: 0.8rem; 
+            opacity: 0.7; 
+            display: block; 
+            margin-top: 2px;
+        }
+        .devis-section {
+            margin-top: 20px;
+            border-top: 1px dashed var(--gold);
+            padding-top: 20px;
+        }
+        .devis-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Style Spécial Chèque TIC */
+        .tic-highlight {
+            background: rgba(207, 169, 74, 0.1);
+            border: 1px dashed var(--gold);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .tic-math {
+            font-family: 'Plus Jakarta Sans', monospace;
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+        .tic-final {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+            margin-top: 5px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 5px;
+        }
+        .tic-slogan {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* --- STYLES CARROUSEL HORIZONTAL --- */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 5px; /* Padding vertical pour l'ombre */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* Pour défilement fluide sur iOS */
+            scrollbar-width: none; /* Cache la barre Firefox */
+        }
+        .carousel-container::-webkit-scrollbar {
+            display: none; /* Cache la barre Chrome/Safari */
+        }
+        
+        /* Cartes Neuro dans le carrousel */
+        .carousel-card {
+            flex: 0 0 300px; /* Largeur fixe pour forcer le défilement */
+            scroll-snap-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--gold);
+        }
+        .neuro-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+
+        /* Masterclass Box mise à jour */
+        .masterclass-box {
+            margin-top: 40px;
+            background: var(--midnight);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        /* Carrousel pour Masterclass */
+        .masterclass-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .masterclass-carousel::-webkit-scrollbar { display: none; }
+        
+        .tag-card {
+            flex: 0 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            white-space: nowrap;
+            scroll-snap-align: center;
+        }
+
+        /* --- CONTACT FORM --- */
+        #contact {
+            padding: 80px 0;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            display: grid;
+            gap: 20px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+        }
+        button[type="submit"] {
+            background-color: var(--midnight);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 15px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button[type="submit"]:hover { background-color: var(--gold); color: var(--midnight); }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #1a2538; /* Légèrement plus foncé que le midnight principal */
+            padding: 60px 0 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .legal-links a { color: var(--gold); margin: 0 10px; }
+        .sasu-info { margin-bottom: 20px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2rem; }
+            .expert-photo { order: -1; }
+            .container { padding: 0 15px; }
+            .nav-logo img { height: 90px; /* Ajustement mobile */ }
+            
+            /* Alignement à gauche sur mobile pour le carrousel pour voir le début */
+            .carousel-card { scroll-snap-align: start; margin-right: 10px; }
+            .carousel-container { padding-left: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / HERO -->
+    <header class="bg-midnight">
+        <div class="container">
+            <nav>
+                <!-- LOGO -->
+                <div class="nav-logo">
+                    <img src="images/logo-ivory.png" alt="Logo IVORY CONSULTING" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'color:white;font-weight:bold;font-size:1.5rem;\'>IVORY <span style=\'color:#CFA94A\'>CONSULTING</span></span>'"> 
+                </div>
+            </nav>
+
+            <section id="hero">
+                <!-- UVP -->
+                <h2>Performance Commerciale & Sérénité Digitale</h2>
+                <h1>L'alliance du Digital et de l'Humain <br><span class="text-gold">pour faire décoller votre entreprise.</span></h1>
+                
+                <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.8;">
+                    J'accompagne les dirigeants des Antilles à structurer leur stratégie commerciale et phygitale. Approche pragmatique à l'aide des neurosciences pour une performance durable.
+                </p>
+
+                <!-- CTA 1 -->
+                <a href="#contact" class="btn-cta">Obtenir mon audit gratuit de 25 min</a>
+            </section>
+        </div>
+    </header>
+
+    <!-- SECTION PROBLEMES -->
+    <section id="problemes" class="bg-ivory">
+        <div class="container">
+            <h2 class="text-center" style="color:var(--midnight)">Pourquoi plafonnez-vous aujourd'hui ?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <i class="fas fa-users-slash"></i>
+                    <h3>Recrutement Difficile</h3>
+                    <p>Vos équipes manquent de motivation ou de technique. Le turnover vous coûte cher.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-chart-line-down"></i>
+                    <h3>Marché Instable</h3>
+                    <p>Tourisme saisonnier, concurrence accrue... Votre trésorerie joue aux montagnes russes.</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Charge Mentale</h3>
+                    <p>Vous êtes au four et au moulin. Vous gérez l'urgence au lieu de construire la stratégie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION METHODE -->
+    <section id="methode" class="bg-midnight">
+        <div class="container">
+            <h2 class="text-center"><span class="text-gold">La Méthode Ivory</span> : 3 étapes pour retrouver de la sérénité commerciale</h2>
+            
+            <div class="steps-container">
+                <div class="step-box">
+                    <span class="step-number">01</span>
+                    <h3>L'Audit Flash (Gratuit)</h3>
+                    <p>Nous analysons en 25 minutes vos blocages actuels. Pas de blabla, juste un diagnostic lucide de votre situation commerciale et digitale.</p>
+                </div>
+                <div class="step-box">
+                    <span class="step-number">02</span>
+                    <h3>Le Plan d'Action "responsable"</h3>
+                    <p>Je construis une stratégie sur-mesure. Pas de méthodes agressives, mais une croissance organique, saine et adaptée à votre écosystème local.</p>
+                </div>
+                <div class="step-box">
+                    <span class="step-number">03</span>
+                    <h3>L'Accompagnement Terrain</h3>
+                    <p>Je ne vous laisse pas seul avec des slides. Nous déployons ensemble les outils (phygital, neuro-vente) pour des résultats mesurables.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#contact" class="btn-cta">Je veux mon plan d'action</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PREUVE SOCIALE -->
+    <section id="references">
+        <div class="container">
+            <h2 class="text-center" style="font-size: 1.2rem; margin-bottom: 20px;">Ils me font confiance</h2>
+            <ul class="logos-list">
+                <li>Human Partners</li>
+                <li>Xalisi Consulting</li>
+                <li>PME Guadeloupe</li>
+                <li>Retail Caraïbes</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION EXPERT -->
+    <section id="expert" class="bg-ivory">
+        <div class="container">
+            <div class="expert-photo">
+                <img src="images/nadje.jpg" alt="Nadjé GUEHI Consultant" onerror="this.src='https://ui-avatars.com/api/?name=Nadjé+Guehi&background=0B1020&color=CFA94A&size=400'">
+            </div>
+            <div class="expert-bio">
+                <h2>L'Expertise Terrain</h2>
+                <h3 class="text-gold" style="margin-bottom: 20px; text-transform:uppercase; font-size: 0.9rem; letter-spacing: 2px;">Nadjé GUEHI</h3>
+                <p style="margin-bottom: 15px;">
+                    Fort de 20 ans d'expérience dans le commerce et le management (ex-Directeur Régional Courir), je ne me limite pas à la restructuration d'entreprises en difficulté.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    J'accompagne votre <strong>digitalisation</strong> (montage Chèque TIC), l'amélioration de votre <strong>e-réputation</strong>, la <strong>conduite du changement</strong> ou tout simplement l'accélération de votre <strong>croissance</strong>.
+                </p>
+                <p style="margin-bottom: 15px; font-weight: 700; color: var(--midnight);">
+                    Ma vision ? Une approche écoresponsable basée sur les neurosciences : on cultive la performance sans épuiser les ressources humaines.
+                </p>
+                <p>
+                    Basé au Gosier, j'apporte aux dirigeants antillais les outils des grands groupes, adaptés à notre réalité locale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION OFFRES -->
+    <section id="offres" class="bg-midnight">
+        <div class="container">
+            <h2 class="text-center">Mes Solutions d'Accompagnement</h2>
+            
+            <div class="offers-grid">
+                <!-- Offre 1 : Option Saison -->
+                <div class="offer-card">
+                    <h3>Option Saison</h3>
+                    <p class="offer-subtitle">Tourisme / Saisonniers</p>
+                    <div class="price-block">
+                        <span class="price-main">290 €</span>
+                        <span class="price-sub">+ 190 €/mois (4 mois)</span>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check text-gold"></i> Location matériel Ivory</li>
+                        <li><i class="fas fa-check text-gold"></i> Paramétrage commercial</li>
+                        <li><i class="fas fa-check text-gold"></i> Suivi opérationnel</li>
+                        <li><i class="fas fa-check text-gold"></i> Idéal pics d'activité</li>
+                    </ul>
+                </div>
+
+                <!-- Offre 2 : Pack Access -->
+                <div class="offer-card featured">
+                    <div style="text-align:center; margin-bottom:10px;"><span style="background:var(--gold); color:var(--midnight); padding:2px 10px; border-radius:10px; font-size:0.7rem; font-weight:bold;">OFFRE PHARE</span></div>
+                    <h3>Pack Access</h3>
+                    <p class="offer-subtitle">TPE Prudentes</p>
+                    <div class="price-block">
+                        <span class="price-main">990 €</span>
+                        <span class="price-sub">+ 49 €/mois (Abonnement)</span>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check text-gold"></i> Audit Flash (Diagnostic)</li>
+                        <li><i class="fas fa-check text-gold"></i> 2 Supports NFC</li>
+                        <li><i class="fas fa-check text-gold"></i> Dossier Chèque TIC inclus</li>
+                        <li><i class="fas fa-check text-gold"></i> Sécurisation de l'activité</li>
+                    </ul>
+                </div>
+
+                <!-- Offre 3 : Pack Performance -->
+                <div class="offer-card">
+                    <h3>Pack Performance</h3>
+                    <p class="offer-subtitle">Dirigeants Ambitieux</p>
+                    <div class="price-block">
+                        <span class="price-main">2 900 €</span>
+                        <span class="price-sub">+ 190 €/mois (Abonnement)</span>
+                    </div>
+                    
+                     <!-- Bloc Chèque TIC -->
+                    <div class="tic-highlight" style="margin-top:-10px; margin-bottom:20px;">
+                        <h4 style="color:var(--gold); font-size:0.8rem; margin-bottom:0px;">💰 Le Levier "Chèque TIC"</h4>
+                        <div class="tic-math">
+                            2 900 € <span style="font-size:0.7rem">(Prix)</span> - 80% <span style="font-size:0.7rem">(Subv.)</span><br>
+                            <span class="tic-final" style="font-size:1.4rem">= 580 € HT</span>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li><i class="fas fa-check text-gold"></i> Audit 360° Complet</li>
+                        <li><i class="fas fa-check text-gold"></i> 6 Séances Neuro-Performance</li>
+                        <li><i class="fas fa-check text-gold"></i> 2 Jours de Mentorat</li>
+                        <li><i class="fas fa-check text-gold"></i> 5 Supports NFC Premium</li>
+                        <li><i class="fas fa-check text-gold"></i> Stratégie complète</li>
+                    </ul>
+                </div>
+
+                <!-- Offre 4 : Sur Mesure -->
+                <div class="offer-card">
+                    <h3>Sur Mesure</h3>
+                    <p class="offer-subtitle">À la Carte</p>
+                    
+                    <!-- Prestations Tarifées -->
+                    <ul class="custom-price-list" style="margin-top: 20px;">
+                        <li>
+                            <div class="custom-item-row">
+                                <span style="font-weight:bold;">Audit "Déclic"</span>
+                                <span class="text-gold" style="font-weight:bold;">750 € HT</span>
+                            </div>
+                            <span class="custom-detail">(Déductible si pack signé)</span>
+                        </li>
+                        <li>
+                            <div class="custom-item-row">
+                                <span style="font-weight:bold;">Séance Neuro-Flash</span>
+                                <span class="text-gold" style="font-weight:bold;">180 € HT</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-item-row">
+                                <span style="font-weight:bold;">Support Bois NFC</span>
+                                <span class="text-gold" style="font-weight:bold;">120 € HT</span>
+                            </div>
+                            <span class="custom-detail">L'unité (ou pack de 5)</span>
+                        </li>
+                    </ul>
+
+                    <!-- Prestations Sur Devis -->
+                    <div class="devis-section">
+                        <p class="devis-title">Sur Devis</p>
+                        <ul>
+                            <li><i class="fas fa-check text-gold"></i> Expertise Trilingue (ES/EN)</li>
+                            <li><i class="fas fa-check text-gold"></i> Client Mystère</li>
+                            <li><i class="fas fa-check text-gold"></i> Team Building</li>
+                            <li><i class="fas fa-check text-gold"></i> Conférence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA 3 -->
+            <div class="text-center" style="margin-top: 50px;">
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">Vous ne savez pas quelle offre choisir ?</p>
+                <a href="#contact" class="btn-cta">En discuter lors de l'audit gratuit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NEURO-MANAGEMENT (MODE CARROUSEL) -->
+    <section id="neuro" class="bg-ivory">
+        <div class="container">
+            <h2 class="text-center" style="color:var(--midnight)">Conseils & Neuro-Management</h2>
+            <p class="text-center" style="font-family:'Playfair Display'; font-style:italic; font-size:1.2rem; color:#666; margin-top:10px;">
+                Optimisez votre cerveau pour optimiser votre business.
+            </p>
+
+            <div style="text-align:center; font-size:0.8rem; opacity:0.6; margin-top:20px; margin-bottom:10px;">
+                <i class="fas fa-arrows-alt-h"></i> Faites défiler pour voir plus
+            </div>
+
+            <div class="carousel-container">
+                <!-- Carte 1 -->
+                <div class="carousel-card">
+                    <span class="neuro-icon">🧠</span>
+                    <h3 style="color:var(--midnight); margin-bottom:15px;">La Charge Mentale</h3>
+                    <p style="font-size:0.9rem;">Pour décider mieux, décidez moins. Automatisez les tâches récurrentes pour garder votre énergie pour la stratégie commerciale.</p>
+                </div>
+                <!-- Carte 2 -->
+                <div class="carousel-card">
+                    <span class="neuro-icon">⚖️</span>
+                    <h3 style="color:var(--midnight); margin-bottom:15px;">Biais de Confirmation</h3>
+                    <p style="font-size:0.9rem;">Un client décide s'il vous fait confiance en 3 secondes. Soignez votre accueil phygital (Avis + Sourire).</p>
+                </div>
+                <!-- Carte 3 -->
+                <div class="carousel-card">
+                    <span class="neuro-icon">🎯</span>
+                    <h3 style="color:var(--midnight); margin-bottom:15px;">Décision sous pression</h3>
+                    <p style="font-size:0.9rem;">En période de crise, le cerveau limbique prend le dessus. Apprenez à temporiser pour réactiver votre cortex préfrontal.</p>
+                </div>
+            </div>
+
+            <!-- Masterclass Box -->
+            <div class="masterclass-box">
+                <h3 style="color:var(--gold); margin-bottom:20px;">Thématiques de Masterclass à venir</h3>
+                
+                <div class="masterclass-carousel">
+                    <span class="tag-card">Décisions sous pression</span>
+                    <span class="tag-card">Neuro-ventes pour TPME</span>
+                    <span class="tag-card">Motivation des équipes commerciales</span>
+                </div>
+                
+                <p style="margin-top:20px; font-size:0.9rem; opacity:0.8;">Restez connectés pour les dates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="bg-midnight">
+        <div class="container">
+            <h2 class="text-center">Contactez l'Expert</h2>
+            <p class="text-center" style="margin-top: 10px; opacity:0.8;">Réponse sous 24h ouvrées.</p>
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> 
+                <input type="text" name="name" placeholder="Votre Nom / Société" required>
+                <input type="email" name="email" placeholder="Votre Email Pro" required>
+                <select name="sujet">
+                    <option value="Audit Gratuit">Je veux mon Audit Gratuit (25 min)</option>
+                    <option value="Devis">Demande de Devis</option>
+                    <option value="Partenariat">Partenariat</option>
+                    <option value="Autre">Autre</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Votre message ou problématique actuelle..." required></textarea>
+                <div class="text-center">
+                    <button type="submit">Envoyer ma demande</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="sasu-info">
+                <strong style="color:var(--white); font-size: 1.1rem; display:block; margin-bottom:10px;">IVORY CORP</strong>
+                <p>SASU au capital de 1 000 €</p>
+                <p>Siège social : 222 impasse Fraiderick, 97190 Le Gosier, Guadeloupe</p>
+                <p>Email : guehinadje@ivoryconsulting.fr | Tél : 0590 89 83 40</p>
+                <p>SIREN : [En cours d'attribution]</p>
+            </div>
+            
+            <div class="legal-links" style="margin: 20px 0;">
+                <a href="#cgv">CGV – Conditions Générales de Vente</a>
+                <a href="#">Mentions Légales</a>
+            </div>
+
+            <p style="margin-top: 20px; opacity: 0.3;">
+                Fait le 02/02/2026 au Gosier. &copy; 2026 IVORY CONSULTING.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
